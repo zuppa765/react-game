@@ -101,6 +101,37 @@ header {
 .fullscreen-enabled {
     background: rgb(255, 255, 255);
 }
+header{
+        .settings.icon{
+            font-size: 3.2rem;
+            :last-child:after{
+            display: none;
+            content: "Coming Soon!";
+            position: absolute;
+            padding: 0.5rem;
+            background-color: #e2e2e2ab;
+            width: 7rem;
+            height: 2rem;
+            right: 0rem;
+            top: 5rem;
+            font-size: 0.9rem;
+            }
+            :last-child:hover:after{
+                display: block;
+            }
+            .info-buttons{
+                position: absolute;
+                padding: 0.5rem;
+                background-color: #e2e2e2ab;
+                width: 11rem;
+                height: 11rem;
+                right: 8rem;
+                top: 4rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+    }
 .container {
     margin: 0 15rem;
     display: flex;
@@ -130,6 +161,7 @@ header {
             text-transform: uppercase;
                 h3{
                 font-weight: 300;
+                margin: 0 1rem;
                 }
             }
             span {
@@ -162,9 +194,7 @@ header {
             font-size: 5rem;
         }
     }
-
 }
-
 .score{
     position: absolute;
     text-align: center;
@@ -426,7 +456,7 @@ header {
     position: absolute;
     bottom: 0.3rem;
     transform: translateX(-50%);
-    left: 50%;
+    left: 85%;
     align-items: center;
     display: flex;
     a{

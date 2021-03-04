@@ -54,7 +54,7 @@ function App() {
           <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} {...clicks} play={play} {...name} />}
           />}
 
-        {!choices.humanChoice ? <Redirect to={levels.level} /> :
+        {!choices.humanChoice ? <Redirect to='/' /> :
           <Route path="/result" render={() =>
             <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
 

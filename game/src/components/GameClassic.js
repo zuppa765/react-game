@@ -3,6 +3,7 @@ import { HumanPick } from './HumanPick';
 import { Result } from './Result';
 import { useAction } from '../hooks/useAction';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import { useKeys } from '../hooks/useKeys';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -18,6 +19,19 @@ export const GameClassic = ({ level, setLevel, options,
         setCompChoice();
         setHumanChoice();
     }
+    const onKeypress = e => {
+        if (e.ctrlKey && e.code === 'KeyC') {
+            setLevel('');
+            setLevel('game-classic');
+        }
+        else if (e.ctrlKey && e.code === 'KeyH') {
+            setLevel('');
+            setLevel('game-hard');
+        }
+        if (compChoice) reload();
+        if (enabled) play({ id: 'cl1' });
+    }
+    useKeys(onKeypress);
 
     return (
         <Router>

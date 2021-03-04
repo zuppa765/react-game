@@ -12,17 +12,6 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
     }
 
     //key control of the level
-    const onKeypress = e => {
-        if (e.code === 'KeyC') {
-            setLevel('');
-            setLevel('game-classic');
-        }
-        else if (e.code === 'KeyH') {
-            setLevel('');
-            setLevel('game-hard');
-        }
-    }
-    useKeys(onKeypress);
 
     return (
         <main className="buttons-start">
